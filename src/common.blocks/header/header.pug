@@ -1,0 +1,15 @@
+include ../small.blocks/email_field/email_field.pug
+include ../small.blocks/callback_opt/callback_opt.pug
+mixin header()
+    - var header_options = ['Главная', 'Проекты', 'Услуги', 'О компании', 'Готовые решения', 'Контакты', 'info@sld-store.ru', 'Обратный звонок']
+    header(class= 'header-main')
+        img(src= '../../img/logo.png')
+        ul(class='header-main_item')
+            each option in header_options
+                if (option === 'info@sld-store.ru')
+                    +email_field(option)
+                else if (option === 'Обратный звонок')
+                    +callback_opt(option, '8 812 615-62-79')
+                else
+                    li
+                        p= option

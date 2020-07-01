@@ -1,0 +1,26 @@
+// main: main.less
+.star-rating{
+  font-size: 0;
+}
+.star-rating__wrap{
+  display: flex;
+  font-size: 1rem;
+}
+.star-rating__wrap:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.star-rating__ico{
+  float: right;
+  padding-left: 2px;
+  cursor: pointer;
+  color: @purple;
+}
+.star-rating__ico:last-child{
+  padding-left: 0;
+}
+.star-rating__input{
+  display: none;
+}
+

@@ -1,0 +1,32 @@
+include ../plus-minus/plus-minus.pug
+include ../checkbox/checkbox.pug
+mixin drop_down(kind, holder, d_class, label)
+    - var choices= [['спальни', 'кровати', 'ванные комнаты'], ['взрослые', 'дети', 'младенцы'], ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор', 'Шампунь']]  
+    div(class= 'drop-down'+d_class)
+        if (kind === 'comfort' ||  kind === 'guests')
+            h3= label
+        div.drop-field= holder
+            div(class='icon-side')
+                i(class="fas fa-chevron-down")
+        div.drop-body
+            if (kind === 'comfort')
+                each val, index in choices[0]
+                    div.opport  
+                        div(class="choice")= val
+                        +plus-minus(index+1)
+                
+            else if (kind === 'guests') 
+                each val, index in choices[1] 
+                    div(class= 'opport opport_'+(index+1))
+                        div(class="choice choice_"+(index+1))= val
+                        +plus-minus(index+1)
+                    
+            else if (kind === 'add')
+                - var id_s= ['breakfast', 'desk', 'feed-chair', 's-bed', 't-v', 'moisture', 't-v', 'moisture']
+                - for(let n = 0; n < choices[2].length; n++)
+                    +checkbox(id_s[n], 'additional', choices[2][n])                      
+            else 
+                div.opport
+                    p= kind
+                
+        

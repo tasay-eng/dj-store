@@ -1,0 +1,56 @@
+// main: main.less
+@import '../../../../config/config.less';
+@import '../../plus-minus/plus-minus.less';
+.drop-down_common {
+  position: absolute;
+  box-sizing: border-box;
+  h3 {
+    .header_3();
+  }
+  .drop-field {
+    width: 100%;
+    line-height: 38px;  
+    .inp_sel();
+    height: 44px;
+    position: relative;
+  }
+  .icon-side {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    i {
+      margin-top: 35%;
+    }
+  }
+  .drop-body{
+    height: 68%;
+    border: 1px solid @text_middle;
+    background: #fff;
+    display: none;
+    .opport{
+      display: flex;
+      height: 44px;
+      padding-top: 10px;
+      .flex();
+      .number {
+        margin: 0 10px 0 10px;
+        input, .minus, .plus{
+          border-radius: 50%;
+          text-align: center;
+          border: 1px solid @text_light;
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+        }
+        .minus, .plus{
+          font-size: 22px;
+          vertical-align: middle;
+          background: #fff;
+        }
+      }
+  }
+  }
+}

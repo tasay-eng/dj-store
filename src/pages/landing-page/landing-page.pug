@@ -1,0 +1,21 @@
+extends ../template-page/template.pug
+append config
+    include ../../config/config.pug
+    include ../../common.blocks/header/header.pug
+    include ../../common.blocks/callback_form/callback_form.pug
+    include ../../common.blocks/benefit_slider/benefit_slider.pug
+    - pageName= 'Главная страница'
+    - pageDesc= 'Страница 1'
+    - bodyclass= 'body-land'
+append head
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+block header
+    +header()
+block content
+    div(class= 'wrapper landing')
+        +callback_form()
+        +benefit_slider()
+    script(type= "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+    script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+    
