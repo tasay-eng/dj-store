@@ -1,19 +1,23 @@
 // main: main.less
-@import "../small.blocks/button/button_purple.less";
-@import "../small.blocks/button/button_white.less";
 @import '../small.blocks/callback_opt/callback_opt.less';
 @import '../small.blocks/email_field/email_field.less';
 .header-main {
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  padding: 1% 9%;
+  .dj_logo{
+    height: 50px;
+    width: 154px;
+  }
   &_item {
-    .toxin_label();
     &:nth-child(2) {
-      width: 75%;
+      margin: 1% 0 0 0;
+      padding: 0;
+      width: 83%;
       .lists();
       .flex();
       li {

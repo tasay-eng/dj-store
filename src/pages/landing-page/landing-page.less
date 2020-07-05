@@ -1,9 +1,16 @@
 @import '../../config/config.less';
 @import '../../common.blocks/header/header.less';
 @import "../../common.blocks/callback_form/callback_form.less";
-.landing {
+@import '../../common.blocks/benefit_slider/benefit_slider.less';
+@import '../../common.blocks/electro_voice/electro_voice.less';
+@import '../../common.blocks/dinamic_block/dinamic_block.less';
+.wrapper-main {
   background: url('../../img/conference.png');
-  height: 100%;
+  height: 624px;
+  box-sizing: border-box;
+  max-height: 95%;
+  display: flex;
+  justify-content: space-between;
   .header-main{
     margin: 0 auto;
   }
@@ -11,6 +18,41 @@
     margin: 8.43% 0 0 9.72%;
   }
 }
-.foot-land{
-  bottom: -130%;
+
+.wrapper-dinamic{
+  height: 100%;
+  display: flex;
+  margin-top: 15%;
+  box-sizing: border-box;
+  .block_half_1{
+    background: #DAE3F6;
+    width: 40%;
+    height: 70%;
+    align-self: center;
+    .container_dinamic{
+        margin: 30% 30%;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        img:nth-of-type(1){
+          flex: 1.5;
+          width: 37%;
+          height: 15%;
+          align-self: flex-end;
+        }
+        img:nth-of-type(2){
+          flex: 1;
+          width: 45%;
+          height: 60%;
+        }
+    }
+  }
+  .block_half_2{  
+    background: url('../../img/conf-room.jpg');
+    width: 65%;
+    height: 620px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
 }

@@ -4,18 +4,30 @@ append config
     include ../../common.blocks/header/header.pug
     include ../../common.blocks/callback_form/callback_form.pug
     include ../../common.blocks/benefit_slider/benefit_slider.pug
+    include ../../common.blocks/electro_voice/electro_voice.pug
+    include ../../common.blocks/dinamic_block/dinamic_block.pug
     - pageName= 'Главная страница'
     - pageDesc= 'Страница 1'
     - bodyclass= 'body-land'
-append head
+prepend head
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 block header
     +header()
 block content
-    div(class= 'wrapper landing')
+    div(class= 'wrapper-main landing')
         +callback_form()
         +benefit_slider()
+    div(class= 'wrapper-dinamic')
+        div.block_half_1
+            div.container_dinamic
+                img(src='../../img/electro_voice_1-removebg-preview (1).png')
+                img(src='../../img/image-removebg-preview (1).png')
+        div.block_half_2
+            +dinamic_block(1)
+            +electro_voice(1)
+            +dinamic_block(2)
+            +electro_voice(2)
     script(type= "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
     script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
     

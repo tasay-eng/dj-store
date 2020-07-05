@@ -1,0 +1,66 @@
+.electro_voice{
+    background: #fff;
+    width: 22%;
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 126.5%;
+    border-radius: 10px;
+    padding: 0.7% 0.7% 0.9% 2%;
+    &:after {
+        content: "";
+        width: 0; 
+        height: 0;
+        position: absolute; 
+        right: 100%; 
+        left: 44%;
+        border-right: 20px solid transparent;
+        border-top: 24px solid #fff;
+        border-left: 20px solid transparent;
+    }
+    .close_form{
+        right: 10px;
+        top: 10px;
+        position: absolute;
+        cursor: pointer;
+    }
+    .top_electro{
+        width: 93%;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            margin: 2% 20% 0 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 132%;
+        }
+    }
+    .specialites{
+        list-style: none;
+        padding: 0 0 0 13px;
+        margin: -4% 0 0 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 142%;
+        li::before{
+            content: "\2022";  
+            color: #397DFF; 
+            font-weight: bold; 
+            display: inline-block;
+            width: 1em; 
+            margin-left: -0.3em;
+            font-size: 26px;
+        }
+    }
+}
+.electro_1{
+    left: 39.2%;
+}
+.electro_2{
+    right: 0;
+}
+.show_form{
+    display: block;
+}

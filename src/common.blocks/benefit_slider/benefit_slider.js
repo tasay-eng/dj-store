@@ -1,24 +1,24 @@
 jQuery(document).ready(function(){
     $('.benefit_slider').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 2,
+        slidesToShow: 1,
+        initialSlide: 0,
+        variableWidth: true,
         responsive: [
           {
             breakpoint: 768,
             settings: {
               arrows: false,
-              centerMode: true,
               centerPadding: '40px',
-              slidesToShow: 2
+              centerMode: true,
+              slidesToShow: 1
             }
           },
           {
             breakpoint: 480,
             settings: {
               arrows: false,
-              centerMode: true,
               centerPadding: '40px',
+              centerMode: true,
               slidesToShow: 1
             }
           }
