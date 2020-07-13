@@ -1,17 +1,23 @@
-const dinamics = document.querySelectorAll('.active_round')
-const electro_voice = document.querySelectorAll('.electro_voice')
-const close_form = document.querySelectorAll('.close_form')
-console.log(electro_voice)
-dinamics.forEach((elem, i)=>{
-    elem.addEventListener('click', (e)=>{
-        form_close_open(electro_voice[i], elem)
-        close_form[i].onclick = (e)=>{
-            form_close_open(electro_voice[i], elem)
-        }
-    })
-});
+const dinamic = document.querySelector('.active_1')
+const electro_voice = document.querySelector('.electro_voice')
+const overlay = document.querySelector('.electro_overlay')
 
-function form_close_open(form, round){
-    round.classList.toggle('add_hover')
+dinamic.addEventListener('click', (e)=>{
+    over_hide(electro_voice, overlay);
+    close_doc_click(electro_voice, overlay);
+})
+
+
+function over_hide(form, over){
     form.classList.toggle('show_form')
+    over.classList.toggle('show_overlay')
+}
+
+
+function close_doc_click(form, over){
+    over.onclick = (e)=>{ 
+        if(!e.target.classList.contains('electro_voice') && !e.target.parentNode.classList.contains('electro_voice')){
+            over_hide(form, over);
+        }
+    }
 }

@@ -3,7 +3,7 @@
 @titles: #1F2041;
 @text_dark: rgba(31, 32, 65, 0.75);
 @text_middle: rgba(31, 32, 65, 0.5);
-@text_light: rgba(31, 32, 65, 0.25);
+@text_light: rgba(43, 45, 58, 0.5);
 @light_shadow: rgba(31, 32, 65, 0.05);
 @buttons: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 @purple: #BC9CFF;
@@ -59,33 +59,18 @@
   padding: 6% 5%;
 
 }
-.header_1() {
-  font-size: 24px;
-  line-height: 30px;
-  color: @titles;
-  font-weight: bold;
-}
-.header_2() {
-  font-size: 19px;
-  line-height: 24px;
-  color: @titles;
-  font-weight: bold;
-}
-.header_3() {
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: @titles;
-  font-weight: bold;
-}
 
 .inp_sel(){
-  border: 1px solid @text_light;
   box-sizing: border-box;
-  border-radius: 4px;
-  height: 44px;
-  font-size: 14px;
-  color: @text_dark;
+  height: 14%;
+  width: 98%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 9px;
+  padding: 3% 2% 3% 3%;
+  font-size: 100%;
+  line-height: 114%;
+  color: #2B2D3A;
+  vertical-align: middle;
 }
 .form() {
   background: @white;
@@ -111,3 +96,11 @@
 .drop(@place) when(@place = header) {
   width: 5.93%;
 }
+
+.cross(){
+  cursor: pointer;
+  right: 4%;
+  top: 5%;
+  position: absolute;
+}
+

@@ -1,33 +1,89 @@
-@import '../small.blocks/button/button.less';
-@import '../small.blocks/button/button_transp.less';
-@import '../small.blocks/button/button_blue.less';
-.callback_form{
-    box-sizing: border-box;
-    margin: 7% 0 0 9%;
-    width: 43%;
-    color: #fff;
-    .header_1{
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 22px;
-        margin: 0;
+// main: main.less
+@import "../small.blocks/input/input.less";
+@import "../small.blocks/button/button.less";
+@import "../small.blocks/button/button_blue.less";
+@import "../small.blocks/checkbox/checkbox.less";
+
+.callback_form {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: @white;
+  top: 30%;
+  left: 30%;
+  width: 34%;
+  padding: 2% 2.5% 3% 2.5%;
+  box-sizing: border-box;
+  border-radius: 16px;
+  height: 54%;
+
+  .close{
+    .cross();
+  }
+  .discuss {
+    font-weight: 600;
+    font-size: 150%;
+    line-height: 110%;
+    color: #2B2D3A;
+    margin: 2% 0 0 0;
+  }
+  .promise{
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 160%;
+    color: #2B2D3A;
+    margin: 0 0 2.5% 0;
+  }
+
+  #userName, #userPhone{
+    margin: 0 0 2% 0;
+    width: 99%;
+  }
+
+  .button_blue {
+    width: 99%;
+  }
+  .checkbox_lab{
+    .check{
+      display: none;
     }
-    .header_2{
-        font-weight: 600;
-        font-size: 52px;
-        line-height: 63px;
-        margin: 2.5% 0 4% 0;
+    .lab{
+      font-size: 85%;
+      line-height: 110%;
+      color: #2B2D3A;
+      &:before{
+        content: " ";
+        color: #397DFF;
+        display: inline-block;
+        font-size: 100%;
+        line-height: 140%;
+        margin: -1% 1.8% 0 0;
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        border-image: initial;
+        background: #EBEEF5;
+        border: 1px solid #397DFF;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+      a{
+        padding-left: 1.3%;
+        color: #397DFF;
+        cursor: pointer;
+      }
     }
-    .conference-descr{
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 148%;
-        margin-bottom: 8%;
+    .check:checked + .lab:before {
+      content: "‎\2713";
     }
-    .button_transp, .button_blue{
-        width: 31%;
-    }
-    .button_blue{
-        margin-left: 3%;
-    }
+  }
+
+}
+.show_form{
+  .flex();
+}
+.show_overlay{
+  display: block;
 }

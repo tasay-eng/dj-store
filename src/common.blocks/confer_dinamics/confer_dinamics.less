@@ -1,0 +1,26 @@
+@import '../../common.blocks/electro_voice/electro_voice.less';
+@import '../../common.blocks/dinamic_block/dinamic_block.less';
+
+.confer_dinamics{
+    width: 70%;
+    height: 30%;
+    margin: 7.3% 10% auto auto;
+    position: relative;
+    .dinamic_wrap{
+        .flex();
+    }
+    .electro_overlay{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        background-color: #ccc;
+        opacity: 0.5;
+    }
+    .show_overlay{
+        display: block;
+    }
+}

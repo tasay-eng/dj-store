@@ -1,6 +1,6 @@
 mixin input_field(type, input_id, holder, input_label)
     div.complex-input
         label(for=input_id)= input_label
-        input(class= 'input-text' id=input_id type=type name=input_id value= holder)
+        input(class= 'input-text' id=input_id type= type placeholder=holder)
 mixin simple_input(type, input_id, holder)
-    input(class= 'input-text' id=input_id type= type name=input_id value=holder)
+    input(class= 'input-text' id=input_id type= type placeholder=holder)

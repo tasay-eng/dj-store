@@ -1,0 +1,9 @@
+include ../small.blocks/button/button.pug
+
+mixin main_confer(hr_1, hr_2, p_descr, index)
+    form(class= 'main_confer main_confer_'+index)
+        h1(class= 'header_1')=hr_1
+        h2(class= 'header_2')= hr_2
+        p(class= 'conference-descr')= p_descr
+        +button('call_btn', 'Обратный звонок', 'transp')
+        +button('brief_btn', 'Заполнить бриф', 'blue')

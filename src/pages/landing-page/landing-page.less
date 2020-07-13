@@ -1,37 +1,57 @@
 @import '../../config/config.less';
 @import '../../common.blocks/header/header.less';
-@import "../../common.blocks/callback_form/callback_form.less";
+@import "../../common.blocks/body_confer_slider/body_confer_slider.less";
 @import '../../common.blocks/benefit_slider/benefit_slider.less';
-@import '../../common.blocks/electro_voice/electro_voice.less';
-@import '../../common.blocks/dinamic_block/dinamic_block.less';
+@import '../../common.blocks/callback_form/callback_form.less';
+@import '../../common.blocks/request_send/request_send.less';
+@import '../../common.blocks/confer_dinamics/confer_dinamics.less';
+
+body{
+  font-family: Montserrat;
+  font-style: normal;
+}
 .wrapper-main {
-  background: url('../../img/conference.png');
-  height: 624px;
   box-sizing: border-box;
-  max-height: 95%;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  margin-top: 5%;
   .header-main{
     margin: 0 auto;
   }
   .find-room {
     margin: 8.43% 0 0 9.72%;
   }
+  
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34, 34, 33, 0.7);
+    z-index: 100;
+  }
+  .show_overlay{
+    display: block;
+  }
 }
 
 .wrapper-dinamic{
+  position: relative;
+  background: #E5E5E5;
   height: 100%;
   display: flex;
   margin-top: 15%;
+  padding-top: 7%;
   box-sizing: border-box;
   .block_half_1{
     background: #DAE3F6;
-    width: 40%;
-    height: 70%;
-    align-self: center;
+    width: 50%;
+    height: 490px;
+    max-height: 960px;
     .container_dinamic{
-        margin: 30% 30%;
-        width: 40%;
+        margin: 23% auto;
+        width: 50%;
         display: flex;
         justify-content: center;
         img:nth-of-type(1){
@@ -47,12 +67,17 @@
         }
     }
   }
+  .confer_room{
+    position: relative;
+    width: 50%;
+    height: 490px;
+    max-height: 960px;
+  }
   .block_half_2{  
-    background: url('../../img/conf-room.jpg');
-    width: 65%;
-    height: 620px;
-    display: flex;
-    justify-content: space-between;
-    
+    width: 50%;
+    right: 0;
+    height: 85%;
+    position: absolute;
   }
 }
+

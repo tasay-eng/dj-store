@@ -1,10 +1,14 @@
 @import '../descript-benefit/descript-benefit.less';
 .benefit_slider{
     color: #fff;
-    width: 35%;
-    margin-top: 11%;
+    width: 36%;
+    height: 30%;
+    top: 34%;
+    right: 0;
+    position: absolute;
+    z-index: 10;
     .slick-slide{
-        width: 1.5%;
+        width: 1.4%;
         margin-right: 0.2%;
         opacity: 0.5;
     }
@@ -15,23 +19,34 @@
         top: 50%;
         text-align: center;
     }
-    .slick-arrow::before{
-        width: 32px;
-        height: 32px;
-    }
-    .slick-prev{
-        left: 0;
-    }
-    .slick-prev::before{
-        background: rgba(186, 209, 255, 0.1);
-    }
-    .slick-next{
-        left: 20%;
-    }
-    .slick-next::before{
-        color: #397DFF;
-    }
     .slick-list{
         padding: 0;
+    }
+    .benefit_arrow{
+        width: 5.4%;
+        height: 14%;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;
+        position: absolute;
+        font-size: 90%;
+        box-sizing: border-box;
+        top: 120%;
+        cursor: pointer;
+    }
+    .prev_arrow{
+        background: rgba(186, 209, 255, 0.1);
+        padding: 1%;
+        color: rgba(255, 255, 255, 0.2);
+        content: url("../../img/grey_arraw.svg");
+        left: 0;
+        
+    }
+    .next_arrow{
+        background: #397DFF;
+        left: 15%;
+        color: #fff;
+        padding: 1%;
+        content: url("../../img/arraw.svg");
     }
 }

@@ -1,0 +1,11 @@
+include ../small.blocks/button/button.pug
+mixin request_send()
+    div.request_send
+        span(class = 'material-icons close close_form_req') close
+        div.round_back
+            div.round_front 
+                span(class = 'material-icons check_mark') check
+        div.ensure
+            p Ваша заявка успешно отправлена. 
+            p Ожидайте звонка в ближайшее время!
+        +button('accept_btn', 'Ок', 'blue')

@@ -1,0 +1,10 @@
+include ../../common.blocks/electro_voice/electro_voice.pug
+include ../../common.blocks/dinamic_block/dinamic_block.pug
+
+mixin confer_dinamics()
+    div.confer_dinamics
+        div.dinamic_wrap
+            +dinamic_block(1)
+            +dinamic_block(2)
+        div.electro_overlay    
+            +electro_voice(1)

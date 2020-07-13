@@ -2,7 +2,7 @@ include ../small.blocks/input/input.pug
 include ../small.blocks/button/button.pug
 mixin electro_voice(num)
     form(class= 'electro_voice electro_'+num action= "url")
-        img(class= 'close_form' src='../../img/clear-24px.svg')
+        span(class = 'material-icons close close_form_el') close
         div.top_electro
             h1 Electro-Voice EVID 4.2
             img(src='../../img/Group 688.svg')

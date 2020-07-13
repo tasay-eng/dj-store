@@ -1,0 +1,62 @@
+@import '../small.blocks/button/button_blue.less';
+.request_send{
+  display: none;
+  position: absolute;
+  background: @white;
+  top: 30%;
+  left: 30%;
+  width: 34%;
+  padding: 3% 2.5% 3% 2.5%;
+  box-sizing: border-box;
+  border-radius: 16px;
+  height: 54%;
+  flex-direction: column;
+
+  .close{
+    .cross();
+  }
+
+  .ensure{
+      text-align: center;
+      font-weight: 500;
+      font-size: 110%;
+      line-height: 162%;
+      p{
+        margin: 0 0 1.5% 0;
+      }
+  }
+
+  .round_back{
+    background: #F2F4F7;
+    border: 1px solid #397DFF;
+    box-sizing: border-box;
+    width: 31%;
+    height: 43%;
+    border-radius: 50%;
+    margin: 0 auto;
+    .round_front{
+      background: #397DFF;
+      border-radius: 50%;
+      color: #fff;
+      margin: 24% auto;
+      box-sizing: border-box;
+      padding: 11% 0 0 0;
+      text-align: center;
+      font-size: 40px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  .button_blue {
+    width: 100%;
+  }
+}
+.show_form{
+  .flex();
+}
+.show_overlay{
+  display: block;
+}

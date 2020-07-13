@@ -2,10 +2,11 @@ extends ../template-page/template.pug
 append config
     include ../../config/config.pug
     include ../../common.blocks/header/header.pug
-    include ../../common.blocks/callback_form/callback_form.pug
+    include ../../common.blocks/body_confer_slider/body_confer_slider.pug
     include ../../common.blocks/benefit_slider/benefit_slider.pug
-    include ../../common.blocks/electro_voice/electro_voice.pug
-    include ../../common.blocks/dinamic_block/dinamic_block.pug
+    include ../../common.blocks/callback_form/callback_form.pug
+    include ../../common.blocks/request_send/request_send.pug
+    include ../../common.blocks/confer_dinamics/confer_dinamics.pug
     - pageName= 'Главная страница'
     - pageDesc= 'Страница 1'
     - bodyclass= 'body-land'
@@ -16,18 +17,19 @@ block header
     +header()
 block content
     div(class= 'wrapper-main landing')
-        +callback_form()
+        +body_confer_slider()
         +benefit_slider()
+        div.popup-overlay
+            +callback_form()
+            +request_send()
     div(class= 'wrapper-dinamic')
         div.block_half_1
             div.container_dinamic
                 img(src='../../img/electro_voice_1-removebg-preview (1).png')
                 img(src='../../img/image-removebg-preview (1).png')
+        img(class= 'confer_room' src='../../img/conf-room.jpg')
         div.block_half_2
-            +dinamic_block(1)
-            +electro_voice(1)
-            +dinamic_block(2)
-            +electro_voice(2)
+            +confer_dinamics()
     script(type= "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
     script(type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
     

@@ -1,8 +1,14 @@
+include ../small.blocks/input/input.pug
 include ../small.blocks/button/button.pug
+include ../small.blocks/checkbox/checkbox.pug
+- let a = 'Я согласен с условиями обработки'+"<a>персональных данных</a>"
 mixin callback_form()
-    form(class= 'callback_form')
-        h1(class= 'header_1') Оснащение конференц-залов
-        h2(class= 'header_2') Видео конференции 
-        p(class= 'conference-descr') Профессиональное оборудование для конференц-залов предназначено для проведения и организации презентаций, совещаний, бизнес-тренингов и онлайн-трансляции контента.
-        +button('call_btn', 'Обратный звонок', 'transp')
-        +button('brief_btn', 'Заполнить бриф', 'blue')
+    form(class= 'callback_form' action= "url" method="post")
+        span(class = 'material-icons close close_form_call') close
+        h1.discuss Готовы обсудить проект?
+        p.promise Заполните форму ниже и мы свяжемся с вами.
+        +simple_input('text', 'userName', 'Имя*')
+        +simple_input( 'text', 'userPhone', 'Телефон*')
+        +checkbox('data_agree', 'Я согласен с условиями обработки'+"<a>персональных данных</a>")
+        +button('send_btn', 'Отправить', 'blue')
+
