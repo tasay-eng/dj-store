@@ -14,9 +14,8 @@ body{
   box-sizing: border-box;
   position: relative;
   margin-top: 5%;
-  .header-main{
-    margin: 0 auto;
-  }
+  max-width: 1224px;
+  margin: 0 auto;
   .find-room {
     margin: 8.43% 0 0 9.72%;
   }
@@ -39,18 +38,19 @@ body{
 .wrapper-dinamic{
   position: relative;
   background: #E5E5E5;
-  height: 100%;
   display: flex;
   margin-top: 15%;
   padding-top: 7%;
   box-sizing: border-box;
+  margin: 10% auto;
+  max-width: 1224px;
   .block_half_1{
     background: #DAE3F6;
     width: 50%;
-    height: 490px;
-    max-height: 960px;
+    height: 395px;
+    max-width: 612px;
     .container_dinamic{
-        margin: 23% auto;
+        margin: 23% auto auto auto;
         width: 50%;
         display: flex;
         justify-content: center;
@@ -67,17 +67,378 @@ body{
         }
     }
   }
-  .confer_room{
+  .block_half_2{  
+    right: 0;
+    background: url('../../img/conf-room — копия.jpg');
     position: relative;
     width: 50%;
-    height: 490px;
-    max-height: 960px;
-  }
-  .block_half_2{  
-    width: 50%;
-    right: 0;
-    height: 85%;
-    position: absolute;
+    max-width: 612px;
+    height: 395px;
   }
 }
+
+
+
+@media (max-width: 1300px){
+  .header-main{
+    padding: 1% 5%;
+  }
+
+}
+
+@media (max-width: 1224px){
+  .header-main{
+    padding: 1% 2%;
+  }
+}
+
+
+@media (max-width: 1074px){
+  .header-main{
+    padding: 1% 0 1% 1.5%;
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  
+}
+
+@media  only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+  .header-main{
+    margin: 0 auto;
+    width: 375px;
+    padding: 5% 3% 2% 3%;
+    display: flex;
+    flex-wrap: wrap;
+    .menu_image{
+      display: block;
+    }
+    .header_menu{
+      display: none;
+      top: 20%;
+      margin: 0 auto;
+      width: 100%;
+      height: 712px;
+      .header_menu_list{
+        flex-direction: column;
+      }
+    }
+    .show_menu{
+      display: flex;
+    }  
+    .hide_img{
+      display: none;
+    }
+  }
+  .wrapper-main{
+    width: 375px;
+    margin: 0 auto;
+    height: 363px;
+    .benefit_slider{
+      display: none;
+    }
+    .body_confer_slider {
+      box-sizing: border-box;
+      height: 363px;
+      .slick-list{
+        height: 363px;
+      }
+      .confer_benefit{
+        background: url('../../img/slider_img_high.png');
+      }
+      .main_confer{
+        color: #F0F0F0;
+        box-sizing: border-box;
+        width: 375px;
+        top: 0;
+        padding: 36px 29px 0 16px;
+        margin: 0;
+        .header_1, .conference-descr{
+          font-size: 14px;
+          line-height: 17px;
+        }
+        .conference-descr{
+          width: 80%;
+          margin-bottom: 32px;
+        }
+        .header_2{
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 37px;
+        }
+        .button_transp, .button_blue{
+          width: 156px;
+          height: 42px;
+          cursor: pointer;
+        }
+        .button_blue{
+          margin-left: 16px;
+        }
+      }
+      
+    }
+  }
+  .hide_main{
+    display: none;
+  }
+  .wrapper-dinamic{
+    padding: 0;
+    height: 200px;
+    width: 375px;
+    margin: 10% auto;
+    .block_half_1{
+      height: 200px;
+      width: 187px;
+      .container_dinamic{
+        width: 75%;
+        margin: 5% auto auto auto;
+      }
+    }
+    .block_half_2{
+      height: 200px;
+      width: 188px;
+      background: url('../../img/high-conf-room.jpg');
+      .confer_dinamics{
+        margin: 28px 9px 0 9px;
+        width: 170px;
+        .electro_voice{
+          width: 323px;
+          height: 184px;
+          left: 0px;
+          top: 0px;
+          position: relative;
+        }
+        .dinamic_block{
+          width: 40px;
+          height: 40px;
+          .active_round{
+            width: 50%;
+            height: 50%;
+            margin: 25% auto;
+            z-index: 5;
+          }
+          .picture_back{
+            background: url('../../img/high-Electro_Voice_EVID_42T_s250-removebg-preview 2 (1).png');
+            width: 20px;
+            height: 23.68px;
+            margin: 25% 0 0 12%;
+          }
+        }
+        .dnc_1{
+          display: block;
+          .active_round{
+            mix-blend-mode: normal;
+          }
+        }
+        .dnc_2{
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/*@media (min-width : 320px) and (max-width : 1024px) {
+  .header-main{
+    padding: 5% 3% 2% 3%;
+    .menu_image{
+      display: block;
+    }
+    .header_menu{
+      display: none;
+    }
+  }
+  .wrapper-dinamic{
+    padding: 0;
+    width: 100%;
+    min-width: 375px;
+    .block_half_1{
+      width: 50%;
+      .container_dinamic{
+        width: 75%;
+        margin: 5% auto auto auto;
+      }
+    }
+    .block_half_2{
+      width: 50%;
+    }
+  }
+}*/
+
+
+
+@media (min-width: 1498px){
+  .dnc_2{
+      display: block;
+  }
+  .wrapper-dinamic{
+    .block_half_2{
+      .confer_dinamics{
+          margin: 8.5% 2% auto auto;
+      }
+    }
+  }
+  .header-main{
+    padding: 1% 12%;
+  }
+
+}
+
+@media (min-width: 1551px){
+  .wrapper-dinamic{
+    .block_half_2{
+      .confer_dinamics{
+          margin: 8% 4% auto auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1591px){
+  .wrapper-dinamic{
+    .block_half_2{
+      .confer_dinamics{
+          margin: 8% 7% auto auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1639px){
+  .wrapper-dinamic{
+    .block_half_2{
+      .confer_dinamics{
+          margin: 8% 9% auto auto;
+      }
+    }
+  }
+  .header-main{
+    padding: 1% 15%;
+  }
+}
+
+@media (min-width: 1671px){
+  .wrapper-dinamic{
+    .block_half_2{
+      .confer_dinamics{
+          width: 67%;
+          margin: 7.5% 11% auto auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1727px){
+  .wrapper-dinamic{
+    .block_half_2{
+      .confer_dinamics{
+          width: 66%;
+          margin: 7.5% 13% auto auto;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1763px){
+  .wrapper-dinamic{
+    .block_half_2{
+      .confer_dinamics{
+          width: 64%;
+          margin: 7.5% 16% auto auto;
+      }
+    }
+  }
+  .header-main{
+    padding: 1% 17.5%;
+  }
+}
+
+@media only screen and (min-width : 1824px) {
+  .header-main{
+    width: 100%;
+    max-width: 1920px;
+    padding: 1% 20%;
+  }
+  .wrapper-main{
+    width: 100%;
+    max-width: 1920px;
+    .main_confer{
+      width: 33%;
+      .header_1{
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .header_2{
+        font-size: 52px;
+        line-height: 63px;
+      }
+      .conference-descr{
+        font-size: 16px;
+      }
+      .button_transp, .button_blue{
+        width: 30%;
+      }
+    }
+    .benefit_slider{
+      top: 40%;
+      .descript-benefit{
+        h1{
+          font-size: 64px;
+          line-height: 78px;
+        }
+      }
+      .benefit_arrow {
+        top: 140%;
+      }
+    }
+  }
+
+  .wrapper-dinamic{
+    max-width: 1920px;
+    .block_half_1{
+      max-width: 960px;
+      height: 620px;
+    }
+    .block_half_2{
+      background: url('../../img/conf-room.jpg');
+      max-width: 960px;
+      height: 620px;
+      .confer_dinamics{
+        width: 65%;
+        margin: 7% 23% auto 18%;
+        .dinamic_block{
+          width: 73px;
+          height: 73px;
+          .big_round{
+            left: 3%;
+            .active_1{
+              &::before{
+                font-size: 210%;
+              }
+            }
+          }
+          .picture_back{
+            background: url('../../img/real-size-Electro_Voice_EVID_42T_s250-removebg-preview 2 (1).png');
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
 

@@ -4,12 +4,15 @@ mixin header()
     - var header_options = ['Главная', 'Проекты', 'Услуги', 'О компании', 'Готовые решения', 'Контакты', 'info@sld-store.ru', 'Обратный звонок']
     header(class= 'header-main')
         img(class= 'dj_logo' src= '../../img/logo.png')
-        ul(class='header-main_item')
-            each option in header_options
-                if (option === 'info@sld-store.ru')
-                    +email_field(option)
-                else if (option === 'Обратный звонок')
-                    +callback_opt(option, '8 812 615-62-79')
-                else
-                    li=option
+        span(class = 'material-icons close close_header') close
+        img(class='menu_image' src = '../../img/menu.svg')
+        div(class='header_menu')
+            ul(class='header_menu_list')
+                each option in header_options
+                    if (option === 'info@sld-store.ru')
+                        +email_field(option)
+                    else if (option === 'Обратный звонок')
+                        +callback_opt(option, '8 812 615-62-79')
+                    else
+                        li=option
                         

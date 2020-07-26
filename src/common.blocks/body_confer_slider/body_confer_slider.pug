@@ -8,5 +8,5 @@ mixin body_confer_slider()
     div(class='body_confer_slider')
         each val, index in hr_1
             div(class='confer_slide c_slide_'+index)
-                img(class='confer_benefit benefit_'+index src='../../img/conference.png')
+                div(class='confer_benefit benefit_'+index)
                 +main_confer(val, hr_2[index], p_descr[index], index)

@@ -15,7 +15,7 @@ function show_hide(form, over){
 
 function close_doc_click(form, over){
     over.onclick = (e)=>{ 
-        if(!e.target.classList.contains('callback_form') && !e.target.parentNode.classList.contains('callback_form')){
+        if(e.target.classList.contains('popup-overlay')){
             show_hide(form, over)
         }
     }

@@ -16,7 +16,7 @@ function over_hide(form, over){
 
 function close_doc_click(form, over){
     over.onclick = (e)=>{ 
-        if(!e.target.classList.contains('electro_voice') && !e.target.parentNode.classList.contains('electro_voice')){
+        if(e.target.classList.contains('electro_overlay')){
             over_hide(form, over);
         }
     }
